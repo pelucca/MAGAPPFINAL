@@ -1,20 +1,136 @@
-<ion-header [translucent]="true">
+
+git
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-icon slot="start" name="search" class="ion-margin-start"></ion-icon>
+    <ion-input placeholder="Pesquisar"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="calendar"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  
+  
+  <ion-card>
+    <ion-card-header>
+<ion-card-title>Célula </ion-card-title>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+    </ion-card-content>
+    
+<ion-segment (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="Estarei">
+    <ion-label>Estarei</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="Faltarei">
+    <ion-label>Faltarei</ion-label>
+  </ion-segment-button>
+</ion-segment>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+<ion-card-title>Célula</ion-card-title>
+<ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+    </ion-card-content>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="Estarei">
+        <ion-label>Estarei</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Faltarei">
+        <ion-label>Faltarei</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+<ion-card-title>Célula</ion-card-title>
+<ion-card-subtitle>Dia 17/10/2020</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+    </ion-card-content>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="Estarei">
+        <ion-label>Estarei</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Faltarei">
+        <ion-label>Faltarei</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+<ion-card-title>Célula</ion-card-title>
+<ion-card-subtitle>Dia 24/10/2020</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+    </ion-card-content>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="Estarei">
+        <ion-label>Estarei</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Faltarei">
+        <ion-label>Faltarei</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+<ion-card-title>Célula</ion-card-title>
+<ion-card-subtitle>Dia 31/10/2020</ion-card-subtitle>
+    </ion-card-header>
+    
+  
+    <ion-card-content>
+      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+    </ion-card-content>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="Estarei">
+        <ion-label>Estarei</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Faltarei">
+        <ion-label>Faltarei</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+  
 </ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="Célula">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Schedule</ion-label>
+      <ion-badge>6</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Map</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
