@@ -1,136 +1,109 @@
-
-git
 <ion-header>
   <ion-toolbar>
     <ion-icon slot="start" name="search" class="ion-margin-start"></ion-icon>
     <ion-input placeholder="Pesquisar"></ion-input>
     <ion-buttons slot="end">
-      <ion-button>
+
+      <button ion-button icon-only (click)="picker.open($event)">
+        <ion-datetime #picker pickerFormat="DD MMMM YYYY" [min]="datePickerMin" [(ngModel)]="datePicker"
+          (ionChange)="changeDate()"></ion-datetime>
         <ion-icon name="calendar"></ion-icon>
-      </ion-button>
+      </button>
+
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  
-  
-  <ion-card>
-    <ion-card-header>
-<ion-card-title>Célula </ion-card-title>
 
-<ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-    </ion-card-content>
-    
-<ion-segment (ionChange)="segmentChanged($event)">
-  <ion-segment-button value="Estarei">
-    <ion-label>Estarei</ion-label>
-  </ion-segment-button>
-  <ion-segment-button value="Faltarei">
-    <ion-label>Faltarei</ion-label>
-  </ion-segment-button>
-</ion-segment>
+<ion-content [scrollEvents]="true">
 
-  </ion-card>
+  <ion-infinite-scroll threshold="100px">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Célula </ion-card-title>
+        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
+          <ion-checkbox checked="true"></ion-checkbox>
+        </div>
 
-  <ion-card>
-    <ion-card-header>
-<ion-card-title>Célula</ion-card-title>
-<ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-    </ion-card-content>
-    <ion-segment (ionChange)="segmentChanged($event)">
-      <ion-segment-button value="Estarei">
-        <ion-label>Estarei</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Faltarei">
-        <ion-label>Faltarei</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-card>
+        <ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
+      </ion-card-header>
 
-  <ion-card>
-    <ion-card-header>
-<ion-card-title>Célula</ion-card-title>
-<ion-card-subtitle>Dia 17/10/2020</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-    </ion-card-content>
-    <ion-segment (ionChange)="segmentChanged($event)">
-      <ion-segment-button value="Estarei">
-        <ion-label>Estarei</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Faltarei">
-        <ion-label>Faltarei</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-card>
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+      </ion-card-content>
+    </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-<ion-card-title>Célula</ion-card-title>
-<ion-card-subtitle>Dia 24/10/2020</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-    </ion-card-content>
-    <ion-segment (ionChange)="segmentChanged($event)">
-      <ion-segment-button value="Estarei">
-        <ion-label>Estarei</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Faltarei">
-        <ion-label>Faltarei</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Célula</ion-card-title>
+        <ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+      </ion-card-content>
 
-  <ion-card>
-    <ion-card-header>
-<ion-card-title>Célula</ion-card-title>
-<ion-card-subtitle>Dia 31/10/2020</ion-card-subtitle>
-    </ion-card-header>
-    
-  
-    <ion-card-content>
-      <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-    </ion-card-content>
-    <ion-segment (ionChange)="segmentChanged($event)">
-      <ion-segment-button value="Estarei">
-        <ion-label>Estarei</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="Faltarei">
-        <ion-label>Faltarei</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-card>
-  
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Célula</ion-card-title>
+        <ion-card-subtitle>Dia 17/10/2020</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Célula</ion-card-title>
+        <ion-card-subtitle>Dia 24/10/2020</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Célula</ion-card-title>
+        <ion-card-subtitle>Dia 31/10/2020</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Célula</ion-card-title>
+        <ion-card-subtitle>Dia 31/10/2020</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+      </ion-card-content>
+    </ion-card>
+
+  </ion-infinite-scroll>
+
+
 </ion-content>
 
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="Célula">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Schedule</ion-label>
+      <ion-icon name="home-sharp"></ion-icon>
+      <ion-label>Células</ion-label>
       <ion-badge>6</ion-badge>
     </ion-tab-button>
 
     <ion-tab-button tab="map">
-      <ion-icon name="map"></ion-icon>
-      <ion-label>Map</ion-label>
+      <ion-icon name="person-sharp"></ion-icon>
+      <ion-label>Perfil</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="about">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
+    <ion-tab-button tab="cultos">
+      <ion-icon name="people-sharp"></ion-icon>
+      <ion-label>Cultos</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
