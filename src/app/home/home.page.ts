@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  datePicker: any;
 
+  constructor() { }
+
+  public changeDate(): void {
+  }
+  public open(event): void {
+    debugger}
 }
