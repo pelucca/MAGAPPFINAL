@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
+  text = 'Meu texto sobre algum assunto';
+  
   constructor() { }
 
   ngOnInit() {
