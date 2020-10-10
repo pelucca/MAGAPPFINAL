@@ -3,122 +3,31 @@
     <ion-icon slot="start" name="search" class="ion-margin-start"></ion-icon>
     <ion-input placeholder="Pesquisar"></ion-input>
     <ion-buttons slot="end">
-
-      <button ion-button icon-only (click)="picker.open($event)">
+      <!-- <button ion-button icon-only (click)="picker.open($event)">
         <ion-datetime #picker pickerFormat="DD MMMM YYYY" [min]="datePickerMin" [(ngModel)]="datePicker"
           (ionChange)="changeDate()"></ion-datetime>
         <ion-icon name="calendar"></ion-icon>
-      </button>
-
+      </button> -->
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [scrollEvents]="true">
+<ion-content>
 
-  <ion-infinite-scroll threshold="100px">
-    <ion-card>
+  <ng-container *ngFor="let cell of cells">
+    <ion-card [ngStyle]="{'background-color': cell.status === 'c' ? '#0d910d' : '' }">
       <ion-card-header>
-        <ion-card-title>Célula </ion-card-title>
-        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
-          <ion-checkbox checked="true"></ion-checkbox>
+        <ion-card-title>{{ cell?.title }}</ion-card-title>
+        <div float-left tappable (click)=" onClickViewDetail()" style="display: flex; float: right">
+          <ion-icon name="eye-sharp"></ion-icon>
         </div>
-        <ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
+        <ion-card-subtitle class="fontSubtitle">{{ cell?.dateEvent }}</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
-        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
+        <ion-icon name="person-circle-outline"></ion-icon>{{ cell?.facilitatorName }}
       </ion-card-content>
     </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Célula</ion-card-title>
-        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
-          <ion-checkbox checked="true"></ion-checkbox>
-        </div>
-
-        <ion-card-subtitle>Dia 10/10/2020</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-      </ion-card-content>
-
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Célula</ion-card-title>
-        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
-          <ion-checkbox checked="true"></ion-checkbox>
-        </div>
-        <ion-card-subtitle>Dia 17/10/2020</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Célula</ion-card-title>
-        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
-          <ion-checkbox checked="true"></ion-checkbox>
-        </div>
-        <ion-card-subtitle>Dia 24/10/2020</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Célula</ion-card-title>
-        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
-          <ion-checkbox checked="true"></ion-checkbox>
-        </div>
-        <ion-card-subtitle>Dia 31/10/2020</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Célula</ion-card-title>
-        <div float-left tappable (click)="open($event)" style="display: flex; float: right ;">
-          <ion-checkbox checked="true"></ion-checkbox>
-        </div>
-        <ion-card-subtitle>Dia 31/10/2020</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-icon name="person-circle-outline"></ion-icon> Renan Gomes Marozzi
-      </ion-card-content>
-    </ion-card>
-
-  </ion-infinite-scroll>
-
+  </ng-container>
 
 </ion-content>
-
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="Célula">
-      <ion-icon name="home-sharp"></ion-icon>
-      <ion-label>Células</ion-label>
-      <ion-badge>6</ion-badge>
-    </ion-tab-button>
-
-    <ion-tab-button tab="map">
-      <ion-icon name="person-sharp"></ion-icon>
-      <ion-label>Perfil</ion-label>
-    </ion-tab-button>
-
-    <ion-tab-button tab="cultos">
-      <ion-icon name="people-sharp"></ion-icon>
-      <ion-label>Cultos</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>

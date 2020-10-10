@@ -1,3 +1,23 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/home']" tab="Célula">
+        <ion-icon name="home-sharp"></ion-icon>
+        <ion-label>Home</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button [routerLink]="['/profile']" tab="profile">
+        <ion-icon name="person-sharp"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button >
+        <ion-icon name="people-sharp"></ion-icon>
+        <ion-label>Cultos</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>
