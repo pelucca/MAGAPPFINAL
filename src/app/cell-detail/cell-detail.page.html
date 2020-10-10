@@ -1,2 +1,66 @@
+<ion-header translucent>
+    <ion-toolbar>
+        <ion-title>
+
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
 <ion-content>
-<ion-content>
+    <div class="ion-padding">
+        <P>Célula: Flechas</P>
+        <p>Data: 17/10/2020</p>
+        <p>Horário: 17:00</p>
+        <p>Facilitador: Evani Silva</p>
+        <p>Louvor: A definir</p>
+    </div>
+
+    <ion-card>
+        <ion-card-header>
+
+            <ion-item>
+                <ion-card-subtitle>Alimentos</ion-card-subtitle>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Pão</ion-label>
+                <ion-checkbox color="primary"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Frios</ion-label>
+                <ion-checkbox color="primary"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Suco</ion-label>
+                <ion-checkbox color="primary"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Refrigerante</ion-label>
+                <ion-checkbox color="primary"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Agua</ion-label>
+                <ion-checkbox color="primary"></ion-checkbox>
+            </ion-item>
+
+
+
+        </ion-card-header>
+
+
+        <ion-card>
+        <!-- Segment with default selection -->
+        <ion-item>
+        <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+        <ion-segment-button value="python">
+        <ion-label>Cancelar</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="javascript">
+        <ion-label>Confirmar</ion-label>
+        </ion-segment-button>
+        </ion-segment>
+    </ion-item>
