@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'cell-detail',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
