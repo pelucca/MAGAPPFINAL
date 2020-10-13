@@ -12,8 +12,4 @@ export class CellDetailPage implements OnInit {
 
   ngOnInit() {
   }
-  public onClickHome(): void {
-    this.router.navigate(['/home']);
-  }
-
 }
