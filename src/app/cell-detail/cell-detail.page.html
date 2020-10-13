@@ -70,19 +70,9 @@
         <ion-item>
             <ion-label>Anotações:</ion-label>
             <ion-input></ion-input>
-          </ion-item>
-
-        <ion-card>
-            <!-- Segment with default selection -->
-            <ion-item>
-                <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
-                    <ion-segment-button value="python">
-                        <ion-label>Cancelar</ion-label>
-                    </ion-segment-button>
-                    <ion-segment-button value="javascript">
-                        <ion-label>Confirmar</ion-label>
-                    </ion-segment-button>
-                </ion-segment>
-            </ion-item>
-
-            
+        </ion-item>
+        
+        <div tappable (click)=" onClickViewDetail()">
+            <ion-button size="large">cancelar</ion-button>
+            <ion-button size="large">Confirmar</ion-button>
+        </div>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { CellDetailPage } from './cell-detail.page';
 
 const routes: Routes = [

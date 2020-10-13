@@ -13,6 +13,9 @@ export class HomePage implements OnInit {
   private cell: Cell = new Cell();
   private cell2: Cell = new Cell();
   private cell3: Cell = new Cell();
+  private cell4: Cell = new Cell();
+  private cell5: Cell = new Cell();
+  private cell6: Cell = new Cell();
 
   constructor(private router: Router) { }
 
