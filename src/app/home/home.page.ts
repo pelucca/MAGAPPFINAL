@@ -39,7 +39,22 @@ export class HomePage implements OnInit {
     this.cell3.facilitatorName = 'Fernando Santos';
     this.cell3.status = 'p';
 
-    this.cells.push(this.cell, this.cell2, this.cell3);
+    this.cell4.title = 'Célula 04';
+    this.cell4.dateEvent = 'Dia 23/10/2020';
+    this.cell4.facilitatorName = 'Fernando Santos';
+    this.cell4.status = 'p';
+
+    this.cell5.title = 'Célula 05';
+    this.cell5.dateEvent = 'Dia 24/10/2020';
+    this.cell5.facilitatorName = 'Fernando Santos';
+    this.cell5.status = 'p';
+
+    this.cell6.title = 'Célula 06';
+    this.cell6.dateEvent = 'Dia 25/10/2020';
+    this.cell6.facilitatorName = 'Fernando Santos';
+    this.cell6.status = 'p';
+
+    this.cells.push(this.cell, this.cell2, this.cell3, this.cell4, this.cell5, this.cell6);
   }
 
   public onClickViewDetail(): void {
